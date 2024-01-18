@@ -22,11 +22,11 @@
 ...
 
 ## Contributing
-Christian Ridgell
-Jacob Smith
-Nicholas Eggleston
-Stefany Hobson
-Angela Ortega-Wendzik
+- Christian Ridgell
+- Jacob Smith
+- Nicholas Eggleston
+- Stefany Hobson
+- Angela Ortega-Wendzik
 
 ...
 
