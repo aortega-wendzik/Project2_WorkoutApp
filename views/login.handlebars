@@ -12,6 +12,27 @@
 <body class="flex items-center justify-center min-h-screen bg-gray-200 py-4">
     <header class="mx-auto bg-white p-6 rounded shadow-md">
         <a href="#" class="text-blue-500">Sign Up</a>
+        <div id="signup-container" style="display: none;">
+  <!-- Sign-up boxes go here -->
+  <form id="signupform" action="signup" method="POST" class="max-w-sm mx-auto bg-white p-6 rogit unded shadow-md">
+    <div class="mb-4">
+                <input type="text" placeholder="first name" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <input type="text" placeholder="Last name" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded" />
+            </div>
+                  <input type="text" placeholder="email" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded" />
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <input type="text" placeholder="phone number" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded" />
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded">Save</button>
+  </form>
+</div>
     </header>
     <div class="container mx-auto py-8">
         <form id="loginForm" action="/login" method="POST" class="max-w-sm mx-auto bg-white p-6 rogit unded shadow-md">
