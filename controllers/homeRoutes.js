@@ -1,0 +1,1 @@
+//used to handle pages like login and profile
