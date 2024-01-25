@@ -49,3 +49,5 @@ MIT License
 - sequelize: ^6.35.2
 - sqlite3: ^5.1.7
 - tailwindcss: ^3.4.1
+
+
