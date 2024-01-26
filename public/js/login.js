@@ -25,19 +25,22 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#name-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const first_name = document.querySelector('#first-name').value.trim();
+  const last_name = document.querySelector('#last-name').value.trim();
+  const username = document.querySelector('#username').value.trim();
+  const phone_number = document.querySelector('#phone-number').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const password = document.querySelector('#password').value.trim();
 
-  if (name && email && password) {
+  if (first_name && last_name && username && phone_number && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ first_name, last_name, username, phone_number, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -45,9 +48,23 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
 
 document
-  .querySelector('.signup-form')
+  .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
+
+    // Get the sign-up link and sign-up container elements var signupLink =
+    document.getElementById('signupLink');
+    var signupContainer = document.getElementById('signupContainer');
+    // Add a click event listener to the sign-up link
+    signupLink.addEventListener('click', function() { 
+      // Toggle the visibility of the sign-up container 
+      if (signupContainer.style.display == 'none') { 
+        signupContainer.style.display = 'block'; 
+        } else {
+    signupContainer.style.display = 'none';
+    }
+    });
+  

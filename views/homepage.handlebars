@@ -1,39 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to JANCS WORKOUT APP!</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.1/tailwind.min.css"/>
-</head>
-<body>
-    <header class="header">
-        <h1>Welcome to JANCS Workout App!</h1>
-        <nav>
-            {{#if logged_in}}
-                <a href="/profile">Profile</a> |
-                <button class="logout-button" id="logout">Logout</button>
-            {{else}}
-                <a href="/login">Login</a> |
-                <a href="/signup">Sign Up</a>
-            {{/if}}
-        </nav>
-    </header>
-
-    <main class="main-content">
-        <h2>Your Personal Fitness Journey Starts Here</h2>
-        <p>Join our community and reach your fitness goals with our personalized workout plans.</p>
-        {{#if logged_in}}
-            <p>Welcome back, {{user.name}}!</p>
-        {{else}}
-            <p>Please login or sign up to continue.</p>
-        {{/if}}
-    </main>
-
-    <footer class="footer">
-        <p>&copy; {{year}} JANCS Fitness. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<h2>Your Personal Fitness Journey Starts Here</h2>
+<p>Join our community and reach your fitness goals with our personalized workout
+  plans.</p>
+{{#if logged_in}}
+  <p>Welcome back, {{user.name}}!</p>
+{{else}}
+  <p>Please login or sign up to continue.</p>
+{{/if}}
