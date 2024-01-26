@@ -1,0 +1,5 @@
+repos:
+  - repo: https://gitlab.com/brettops/tools/badgie
+    rev: "0.9.0"
+    hooks:
+      - id: badgie
