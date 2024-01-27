@@ -34,7 +34,7 @@ This will install all the necessary packages listed in `package.json` needed to 
 
 To use JANCS Workout App, follow these steps:
 
-1. **Start the Application**: Run the application by executing the command `npm start` in your terminal. This will initiate the server and the application should be available at `http://localhost:3000` by default.
+1. **Start the Application**: Run the application by executing the command `npm start` in your terminal. This will initiate the server and the application should be available at `http://localhost:3001` by default.
 
 2. **Create an Account**: Navigate to the homepage and sign up for an account by providing your name, email, and a password. This will allow you to save your workouts and track your progress.
 
