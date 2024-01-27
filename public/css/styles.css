@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +8,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: greenyellow;
     min-height: 100vh;
-    background: rgb(46, 94, 139);
-}
+    color: aliceblue; 
+    background-image: url("/Assets/imgs/Screenshotdumbell.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  } 

@@ -14,7 +14,7 @@ JANCS Workout App is a comprehensive fitness platform designed to help users ach
 
 The application features a robust database of exercises that users can utilize to create personalized workout routines. It leverages modern technologies to provide a seamless experience, including account creation for personalized tracking and a community section for users to share their achievements and tips.
 
-Additionally, the app incorporates nutritional guidance to complement the physical training aspect, offering meal plans and recipes to support users' overall well-being. JANCS Workout App is the perfect companion for anyone looking to take control of their fitness journey, providing the tools and support needed to stay motivated and reach their goals.
+(COMING SOON)Additionally, the app incorporates nutritional guidance to complement the physical training aspect, offering meal plans and recipes to support users' overall well-being. JANCS Workout App is the perfect companion for anyone looking to take control of their fitness journey, providing the tools and support needed to stay motivated and reach their goals.
 
 ...
 
@@ -93,6 +93,7 @@ MIT License
 - sqlite3: ^5.1.7
 - tailwindcss: ^3.4.1
 
+
 ## Technologies Used
 
 - bcrypt for password hashing
@@ -105,3 +106,4 @@ MIT License
 - sequelize as an ORM for Node.js
 - sqlite3 for the SQLite database
 - tailwindcss for utility-first CSS styling
+
