@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.1/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
 
     <title>JANCS WORKOUT APP!</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <div class="flex-column justify-space-around">
         <header class="display-flex justify-space-between align-center p-2">
             <h1>
-                <span role="img" aria-label="money">💸</span>
+                <span role="img" aria-label="dumbbell">💪</span>
                 <a href="/">WORKOUT!</a>
             </h1>
             <nav>
@@ -32,14 +32,14 @@
             <!-- Render the sub layout -->
             {{{ body }}}
         </main>
-        <footer>
-
-        </footer>
+        <footer class="footer">
+        <p>&copy; 2024 JANCS Fitness. All rights reserved.</p>
+    </footer>
     </div>
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+    <script src="./js/logout.js"></script>
     {{/if}}
 </body>
 
