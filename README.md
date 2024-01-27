@@ -76,6 +76,7 @@ MIT License
 - [Contributing](#contributing)
 - [License](#license)
 - [Dependencies](#dependencies)
+- [Technologies Used](#technologies-used)
 
 ...
 
@@ -91,3 +92,18 @@ MIT License
 - sequelize: ^6.35.2
 - sqlite3: ^5.1.7
 - tailwindcss: ^3.4.1
+
+
+## Technologies Used
+
+- bcrypt for password hashing
+- connect-session-sequelize as a session store for Sequelize
+- dotenv for environment variable management
+- express as the web application framework
+- express-handlebars for view templating
+- express-session for session management
+- mysql2 for MySQL database interaction
+- sequelize as an ORM for Node.js
+- sqlite3 for the SQLite database
+- tailwindcss for utility-first CSS styling
+
