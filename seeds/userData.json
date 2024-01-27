@@ -1,27 +1,42 @@
 [
   {
-    "name": "Nick",
+    "first_name": "Nick",
+    "last_name": "nick",
     "email": "nicke@hotmail.com",
+    "username": "nick",
+    "phone_number": "8675309",
     "password": "password12345"
   },
   {
-    "name": "Stephany",
+    "first_name": "Stefany",
+    "last_name": "Nick",
     "email": "stephanyh@gmail.com",
+    "username": "nick",
+    "phone_number": "8675309",
     "password": "password12345"
   },
   {
-    "name": "Angela",
+    "first_name": "Angela",
+    "last_name": "Nick",
     "email": "angelaow@aol.com",
+    "username": "nick",
+    "phone_number": "8675309",
     "password": "password12345"
   },
   {
-    "name": "Christian",
+    "first_name": "Christian",
+    "last_name": "Nick",
     "email": "christianr@msn.com",
+    "username": "nick",
+    "phone_number": "8675309",
     "password": "password12345"
   },
   {
-    "name": "Jacob",
+    "first_name": "Jacob",
+    "last_name": "Nick",
     "email": "the_jacobs@yahoo.com",
+    "username": "nick",
+    "phone_number": "8675309",
     "password": "password12345"
   }
 ]
