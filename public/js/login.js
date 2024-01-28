@@ -2,14 +2,14 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector('#email').value.trim();
-  const password = document.querySelector('#password').value.trim();
+  const username = document.querySelector('#username1').value.trim();
+  const password = document.querySelector('#username1').value.trim();
 
-  if (email && password) {
+  if (username && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -47,9 +47,7 @@ const signupFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
+
 
 document
   .querySelector('#signup-form')
@@ -67,4 +65,19 @@ document
     signupContainer.style.display = 'none';
     }
     });
+
+    // Login form event listener
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+
+// Get the login link element
+var loginLink = document.getElementById('loginButton');
+
+// Add a click event listener to the login link
+loginButton.addEventListener('click', function(event) {
+  // Prevent the default behavior of the link
+  event.preventDefault();
+
+  // Show the login form
+  document.getElementById('login-form').style.display = 'block';
+});
   
