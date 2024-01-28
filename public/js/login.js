@@ -10,6 +10,9 @@ const loginFormHandler = async (event) => {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
+
+      body: JSON.stringify({ username, password }),
+
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -47,9 +50,6 @@ const signupFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
 
 document
   .querySelector('#signup-form')
@@ -67,4 +67,20 @@ document
     signupContainer.style.display = 'none';
     }
     });
+
+    // Login form event listener
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+
+// Get the login link element
+var loginButton = document.getElementById('loginButton');
+
+// Add a click event listener to the login link
+loginButton.addEventListener('click', function(event) {
+  // Prevent the default behavior of the link
+  event.preventDefault();
+  
+
+  // Show the login form
+  document.getElementById('login-form').style.display = 'block';
+});
   

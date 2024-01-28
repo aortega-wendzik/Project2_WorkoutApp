@@ -19,7 +19,10 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { username: req.body.username } });
+
+    const userData = await User.findOne({ where: { username: req.body.username } 
+    const userData = await User.findOne({ where: { username1: req.body.username1 } });
+
 
     if (!userData) {
       res
