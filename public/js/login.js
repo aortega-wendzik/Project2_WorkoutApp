@@ -67,4 +67,18 @@ document
     signupContainer.style.display = 'none';
     }
     });
+
+    document.getElementById("signupLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("signup-form").style.display = "block";
+    });
+    
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("signup-form").style.display = "none";
+    });
+
+    
   

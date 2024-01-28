@@ -8,10 +8,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: greenyellow;
+    background: rgb(29, 37, 16);
     min-height: 100vh;
-    color: aliceblue; 
+    color: rgb(19, 20, 17);
+    font-weight: bold; 
     background-image: url("/Assets/imgs/Screenshotdumbell.png");
     background-size: cover;
     background-repeat: no-repeat;
   } 
+  .p {
+    color: aliceblue;
+  }
+
+  #login-form {
+    background: rgba(95, 158, 160, 0.151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #login-form h1 {
+    color: rgb(234, 242, 8);
+  }
+
+  #login-form .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #login-form button {
+    width: 35%;
+  }
+
+  #signup-form {
+    background: rgba(95, 158, 160, 0.151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #signupLink {
+    color: rgb(234, 242, 8);
+  }
