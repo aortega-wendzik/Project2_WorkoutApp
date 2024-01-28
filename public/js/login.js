@@ -68,19 +68,17 @@ document
     }
     });
 
-    // Login form event listener
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+    document.getElementById("signupLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("login-form").style.display = "none";
+      document.getElementById("signup-form").style.display = "block";
+    });
+    
+    document.getElementById("loginLink").addEventListener("click", function(event) {
+      event.preventDefault();
+      document.getElementById("login-form").style.display = "block";
+      document.getElementById("signup-form").style.display = "none";
+    });
 
-// Get the login link element
-var loginButton = document.getElementById('loginButton');
-
-// Add a click event listener to the login link
-loginButton.addEventListener('click', function(event) {
-  // Prevent the default behavior of the link
-  event.preventDefault();
-  
-
-  // Show the login form
-  document.getElementById('login-form').style.display = 'block';
-});
+    
   

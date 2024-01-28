@@ -1,6 +1,6 @@
 <div class='container mx-auto py-8'>
   <form id='login-form' action='/login' method='POST'
-    class='max-w-sm mx-auto bg-white p-6 rogit unded shadow-md'>
+    class='max-w-sm mx-auto bg-white p-6 rogit unded shadow-md text-center'>
 
     <h1 class='text-2xl text-center mb-6'>Workout With JANCS App login</h1>
     <div class='mb-4'>
@@ -30,7 +30,7 @@
       </div>
     </script>
     <button
-      id="loginButton"
+     id="loginButton"
       type='submit'
       class='w-full bg-blue-500 text-white py-2 px-4 rounded'
     >Log In</button>
@@ -38,12 +38,13 @@
       type='reset'
       class='w-full bg-gray-300 text-gray-700 py-2 px-4 mt-2 rounded'
     >Log Out</button>
-  </form>
+  
   {{#if isLoggedIn}}
     <p class='mt-4'>Welcome, {{username}}!</p>
   {{else}}
-    <p class='mt-4'>Please Log In</p>
+    <p class='mt-4 text-center'>Please Log In</p>
     <a href='#' id='signupLink'>Sign Up</a>
+    </form>
     <form id="signup-form" action="/api/users" method="POST">
       <div id='signupContainer' style='display: none;'>
         <div class='mb-4' class='signupContainer'>
