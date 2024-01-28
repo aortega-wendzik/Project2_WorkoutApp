@@ -2,14 +2,15 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector('#email').value.trim();
-  const password = document.querySelector('#password').value.trim();
+  const email = document.querySelector('#username1').value.trim();
+  const password = document.querySelector('#password1').value.trim();
+  
 
-  if (email && password) {
+  if (username && password) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -54,6 +55,16 @@ document
 document
   .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
+
+  document.getElementById('loginButton');
+  var loginForm = document.getElementById('login-form')
+  document.getElementById('loginButton').addEventListener('click', function() {
+    if (loginForm.style.display == 'none') {
+      loginForm.style.display = 'block';
+    } else {
+      loginForm.style.display = 'none';
+    }
+  });
 
     // Get the sign-up link and sign-up container elements var signupLink =
     document.getElementById('signupLink');
