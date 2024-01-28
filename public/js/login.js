@@ -2,8 +2,9 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const username = document.querySelector('#username1').value.trim();
-  const password = document.querySelector('#username1').value.trim();
+  const email = document.querySelector('#username1').value.trim();
+  const password = document.querySelector('#password1').value.trim();
+  
 
   if (username && password) {
     // Send a POST request to the API endpoint
@@ -53,6 +54,16 @@ document
   .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
 
+  document.getElementById('loginButton');
+  var loginForm = document.getElementById('login-form')
+  document.getElementById('loginButton').addEventListener('click', function() {
+    if (loginForm.style.display == 'none') {
+      loginForm.style.display = 'block';
+    } else {
+      loginForm.style.display = 'none';
+    }
+  });
+
     // Get the sign-up link and sign-up container elements var signupLink =
     document.getElementById('signupLink');
     var signupContainer = document.getElementById('signupContainer');
@@ -65,19 +76,4 @@ document
     signupContainer.style.display = 'none';
     }
     });
-
-    // Login form event listener
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
-
-// Get the login link element
-var loginLink = document.getElementById('loginButton');
-
-// Add a click event listener to the login link
-loginButton.addEventListener('click', function(event) {
-  // Prevent the default behavior of the link
-  event.preventDefault();
-
-  // Show the login form
-  document.getElementById('login-form').style.display = 'block';
-});
   
