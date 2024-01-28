@@ -10,6 +10,7 @@ const loginFormHandler = async (event) => {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -47,9 +48,6 @@ const signupFormHandler = async (event) => {
   }
 };
 
-// document
-//   .querySelector('#login-form')
-//   .addEventListener('submit', loginFormHandler);
 
 document
   .querySelector('#signup-form')
