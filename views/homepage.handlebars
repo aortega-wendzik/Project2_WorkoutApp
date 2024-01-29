@@ -1,13 +1,17 @@
+
 <h1>
                 <span role="img" aria-label="dumbbell">💪</span>
-                <a href="/">WORKOUT!</a>
+                <a href="/" class="header">JANCS WORKOUT!</a>
             </h1>
             
-      <h2>Your Personal Fitness Journey Starts Here</h2>
-<p>Join our community and reach your fitness goals with our personalized workout
-  plans.</p>
+            
+            
+      <h2>Your Personal Fitness Journey Starts Here</h2><br>
+<p>Join our community and reach your fitness goals with our personal workout recorder.
+  </p><br>
+
 {{#if logged_in}}
-  <p>Welcome back, {{user.username}}!</p>
+  <p class="p">Welcome back, {{user.username}}!</p>
 {{else}}
-  <p>Please login or sign up to continue.</p>
+  <p class="p">Please login or sign up to continue.</p>
 {{/if}}
