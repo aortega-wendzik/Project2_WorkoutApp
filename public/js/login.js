@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the homepage
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -32,10 +32,24 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
 
-  if (first_name && last_name && username && phone_number && email && password) {
+  if (
+    first_name &&
+    last_name &&
+    username &&
+    phone_number &&
+    email &&
+    password
+  ) {
     const response = await fetch('/api/users', {
       method: 'POST',
-      body: JSON.stringify({ first_name, last_name, username, phone_number, email, password }),
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        username,
+        phone_number,
+        email,
+        password,
+      }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -47,35 +61,38 @@ const signupFormHandler = async (event) => {
   }
 };
 
-
+document
+  .querySelector('#login-form')
+  .addEventListener('submit', loginFormHandler);
 document
   .querySelector('#signup-form')
   .addEventListener('submit', signupFormHandler);
 
-    // Get the sign-up link and sign-up container elements var signupLink =
-    document.getElementById('signupLink');
-    var signupContainer = document.getElementById('signupContainer');
-    // Add a click event listener to the sign-up link
-    signupLink.addEventListener('click', function() { 
-      // Toggle the visibility of the sign-up container 
-      if (signupContainer.style.display == 'none') { 
-        signupContainer.style.display = 'block'; 
-        } else {
+// Get the sign-up link and sign-up container elements var signupLink =
+var signupLink = document.getElementById('signupLink');
+var signupContainer = document.getElementById('signupContainer');
+// Add a click event listener to the sign-up link
+signupLink.addEventListener('click', function () {
+  // Toggle the visibility of the sign-up container
+  if (signupContainer.style.display == 'none') {
+    signupContainer.style.display = 'block';
+  } else {
     signupContainer.style.display = 'none';
-    }
-    });
+  }
+});
 
-    document.getElementById("signupLink").addEventListener("click", function(event) {
-      event.preventDefault();
-      document.getElementById("login-form").style.display = "none";
-      document.getElementById("signup-form").style.display = "block";
-    });
-    
-    document.getElementById("loginLink").addEventListener("click", function(event) {
-      event.preventDefault();
-      document.getElementById("login-form").style.display = "block";
-      document.getElementById("signup-form").style.display = "none";
-    });
+document
+  .getElementById('signupLink')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('signup-form').style.display = 'block';
+  });
 
-    
-  
+document
+  .getElementById('loginLink')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('signup-form').style.display = 'none';
+  });

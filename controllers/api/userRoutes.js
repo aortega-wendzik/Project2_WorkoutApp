@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// This is to sign up new users
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -17,6 +18,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// This is to log in to account.
 router.post('/login', async (req, res) => {
   try {
 
