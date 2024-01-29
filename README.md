@@ -106,4 +106,3 @@ MIT License
 - sequelize as an ORM for Node.js
 - sqlite3 for the SQLite database
 - tailwindcss for utility-first CSS styling
-
