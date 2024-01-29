@@ -1,0 +1,47 @@
+<h1>My Workouts</h1>
+{{#each workouts as |workout|}}
+  <div style="background: lightgray;">
+    <h2>{{workout.name}}</h2>
+    <p>{{workout.description}}</p>
+  </div>
+{{/each}}
+
+<button id="newWorkoutButton">Add New Workout</button>
+
+<div id="newWorkoutForm" style="display: none;">
+  <input type="text" id="newWorkoutName" placeholder="Name">
+  <input type="text" id="newWorkoutDescription" placeholder="Description">
+  <button id="submitWorkoutButton">Submit</button>
+</div>
+
+<script>
+  document.getElementById('newWorkoutButton').addEventListener('click', function() {
+    document.getElementById('newWorkoutForm').style.display = 'block';
+  });
+
+  document.getElementById('submitWorkoutButton').addEventListener('click', newWorkout);
+
+  async function newWorkout(event) {
+    event.preventDefault();
+    const name = document.querySelector('#newWorkoutName').value.trim();
+    const description = document.querySelector('#newWorkoutDescription').value.trim();
+
+    if (name && description) {
+      const response = await fetch('/api/workouts', {
+        method: 'POST',
+        body: JSON.stringify({
+          name,
+          description,
+        }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert(response.statusText);
+      }
+    }
+    return false;
+  }
+</script>
