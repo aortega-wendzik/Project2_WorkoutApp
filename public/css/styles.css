@@ -90,3 +90,24 @@ body {
   #signupLink {
     color: rgb(234, 242, 8);
   }
+
+ /* Styles for default (desktop) layout */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Styles for tablet layout */
+@media (max-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+/* Styles for mobile layout */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+}
